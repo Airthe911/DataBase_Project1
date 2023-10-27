@@ -1,0 +1,268 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 18:47:49] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 18:47:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 18:48:28] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 18:49:04] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 18:49:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 18:49:09] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 18:53:39] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 18:53:40] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 18:53:40] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-780-695
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 18:58:07] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\serve.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-780-695
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 19:07:48] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 19:07:52] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 19:07:53] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 19:11:02] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 19:16:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 19:16:57] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2023 19:17:44] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages\\coverage\\report.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 22:50:09] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 22:50:26] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 22:50:41] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 22:50:53] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 22:57:11] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:02:09] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:02:38] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:03:20] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:03:54] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:04:13] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:05:15] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:05:42] "[35m[1mPOST /auth/login HTTP/1.1[0m" 530 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages\\bson\\max_key.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:11:41] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:14:54] "POST /auth/logout HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:16:35] "[31m[1mPOST /auth/unregister HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:16:40] "[35m[1mPOST /auth/unregister HTTP/1.1[0m" 530 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:17:24] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:17:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 901 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:17:48] "[35m[1mPOST /auth/register HTTP/1.1[0m" 901 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:17:56] "[35m[1mPOST /auth/register HTTP/1.1[0m" 901 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:21:41] "[35m[1mPOST /auth/register HTTP/1.1[0m" 901 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:24:15] "[35m[1mPOST /auth/register HTTP/1.1[0m" 901 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:25:40] "[35m[1mPOST /auth/register HTTP/1.1[0m" 901 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:26:03] "[35m[1mPOST /auth/register HTTP/1.1[0m" 901 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:27:30] "[35m[1mPOST /auth/register HTTP/1.1[0m" 901 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:29:40] "[35m[1mPOST /auth/register HTTP/1.1[0m" 901 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:30:17] "[35m[1mPOST /auth/register HTTP/1.1[0m" 901 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:30:54] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:31:22] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:31:24] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:31:38] "POST /auth/logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:31:41] "[35m[1mPOST /auth/unregister HTTP/1.1[0m" 530 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:31:48] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:31:50] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:32:45] "POST /auth/unregister HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:34:21] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:34:22] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:34:24] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:34:37] "POST /auth/logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:34:39] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:34:44] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:35:02] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:35:16] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:35:54] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:35:57] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:36:40] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:36:49] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:36:52] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:37:02] "POST /auth/logout HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:37:55] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:38:02] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Airthe911\\Desktop\\¿Î³Ì\\µ±´úÊý¾Ý¹ÜÀíÏµÍ³\\2023_ECNU_PJ1_µÚ¼¸×é\\2023_ECNU_PJ1_µÚ¼¸×é\\bookstore\\be\\model\\user.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-721-275
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:38:26] "[31m[1mPOST /auth/password HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:38:29] "POST /auth/password HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:38:41] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:38:47] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:39:05] "POST /auth/logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:39:09] "[31m[1mPOST /auth/unregister HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [27/Oct/2023 23:39:14] "POST /auth/unregister HTTP/1.1" 200 -
