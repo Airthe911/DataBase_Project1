@@ -110,12 +110,12 @@ class Buyer(db_conn.DBConn):
             result = cur.find({"order_id": order_id})
             if result.count() == 0:
                 return 903, "查询new_order_detail表出错"
+            total_price = 0
             for each in result:
                 count = each["count"]
                 price = each["price"]
-                total_price = price * count
+                total_price = total_price + price * count
                 print(total_price)
-                break
             if balance < total_price:
                 return error.error_not_sufficient_funds(order_id)
 

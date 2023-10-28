@@ -59,6 +59,9 @@ class User(db_conn.DBConn):
             terminal = "terminal_{}".format(str(time.time()).replace(".", "_"))
             token = jwt_encode(user_id, terminal)
             cur = self.conn["user"]
+            result = cur.find({"user_id": user_id})
+            if result.count() != 0:
+                return 931, "该账号已被注册"
             cur.insert_one({
                 "user_id": user_id,
                 "password": password,
