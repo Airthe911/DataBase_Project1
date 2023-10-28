@@ -8,14 +8,7 @@ class Seller(db_conn.DBConn):
     def __init__(self):
         db_conn.DBConn.__init__(self)
 
-    def add_book(
-        self,
-        user_id: str,
-        store_id: str,
-        book_id: str,
-        book_json_str: str,
-        stock_level: int,
-    ):
+    def add_book(self, user_id, store_id, book_id, book_info, stock_level):
         try:
             if not self.user_id_exist(user_id):
                 return error.error_non_exist_user_id(user_id)
@@ -27,7 +20,7 @@ class Seller(db_conn.DBConn):
             cur.insert_one({
                 "store_id": store_id,
                 "book_id": book_id,
-                "book_info": book_json_str,
+                "price": json.loads(book_info).get("price"),
                 "stock_level": stock_level
             })
         except sqlite.Error as e:
@@ -36,9 +29,7 @@ class Seller(db_conn.DBConn):
             return 530, "{}".format(str(e))
         return 200, "ok"
 
-    def add_stock_level(
-        self, user_id: str, store_id: str, book_id: str, add_stock_level: int
-    ):
+    def add_stock_level(self, user_id: str, store_id: str, book_id: str, add_stock_level: int):
         try:
             if not self.user_id_exist(user_id):
                 return error.error_non_exist_user_id(user_id)
@@ -46,11 +37,11 @@ class Seller(db_conn.DBConn):
                 return error.error_non_exist_store_id(store_id)
             if not self.book_id_exist(store_id, book_id):
                 return error.error_non_exist_book_id(book_id)
-
             cur = self.conn["store"]
             result = cur.update_one({"store_id": store_id, "book_id": book_id}, {"$inc": {"stock_level": add_stock_level}})
             if result.matched_count == 0:
                 print("新增库存中, stock_level更新错误")
+                return 922, "新增库存中，stock_level更新错误"
         except sqlite.Error as e:
             return 528, "{}".format(str(e))
         except BaseException as e:

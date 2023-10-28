@@ -27,22 +27,15 @@ class Buyer(db_conn.DBConn):
                     return error.error_non_exist_book_id(book_id) + (order_id,)
                 for each in result:
                     stock_level = each["stock_level"]
-                    break
-                cur = self.conn["book"]
-                result = cur.find({"id": book_id})
-                if result.count() == 0:
-                    return error.error_non_exist_book_id(book_id) + (order_id,)
-                for each in result:
                     price = each["price"]
                     break
                 if stock_level < count:
                     return error.error_stock_level_low(book_id) + (order_id,)
-                cur = self.conn["store"]
                 result = cur.update_one({"store_id": store_id, "book_id": book_id, "stock_level": stock_level}, {"$set": {"stock_level": stock_level - count}})
                 if result.matched_count == 0:
                     return error.error_stock_level_low(book_id) + (order_id,)
                 cur = self.conn["new_order_detail"]
-                result = cur.insert_one({
+                cur.insert_one({
                     "order_id": order_id, 
                     "book_id": book_id, 
                     "count": count,
@@ -53,15 +46,13 @@ class Buyer(db_conn.DBConn):
                     "delivery_time": None,
                     "receipt_time": None
                 })
-                if not result.acknowledged:
-                    return 902, "数据插入失败"
-            cur = self.conn["new_order"]
-            result = cur.insert_one({
-                "order_id": order_id,
-                "store_id": store_id,
-                "user_id": user_id,
-                "payment_time": None
-            })
+                cur = self.conn["new_order"]
+                cur.insert_one({
+                    "order_id": order_id,
+                    "store_id": store_id,
+                    "user_id": user_id,
+                    "payment_time": None
+                })
         except sqlite.Error as e:
             logging.info("528, {}".format(str(e)))
             return 528, "{}".format(str(e)), ""
@@ -119,22 +110,22 @@ class Buyer(db_conn.DBConn):
             result = cur.find({"order_id": order_id})
             if result.count() == 0:
                 return 903, "查询new_order_detail表出错"
-            total_price = 0
             for each in result:
                 count = each["count"]
                 price = each["price"]
-                total_price = total_price + price * count
+                total_price = price * count
+                print(total_price)
+                break
             if balance < total_price:
                 return error.error_not_sufficient_funds(order_id)
 
             cur = self.conn["user"]
-            result = cur.update_one({"user_id": buyer_id, "balance": total_price}, {"$set": {"balance": balance - total_price}})
+            result = cur.update_one({"user_id": buyer_id}, {"$set": {"balance": balance - total_price}})
             if cur.matched_count == 0:
-                return error.error_not_sufficient_funds(order_id)
-            cur = self.conn["user"]
-            result = cur.update_one({"user_id": buyer_id}, {"$set": {"balance": balance + total_price}})
-            if result.matched_count == 0:
                 return error.error_non_exist_user_id(buyer_id)
+            result = cur.update_one({"user_id": seller_id}, {"$inc": {"balance": total_price}})
+            if result.matched_count == 0:
+                return error.error_non_exist_user_id(seller_id)
             """
             cur = self.conn["new_order"]
             result = cur.delete_one({"order_id": order_id})

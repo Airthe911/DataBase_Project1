@@ -37,6 +37,16 @@ def order_lookup():
     code, message = o.lookup(order_id, user_id, password)
     return jsonify({"message": message}), code
 
+# 用于取消订单
+@bp_operations.route("/cancer", methods=["POST"])
+def order_cancer():
+    order_id = request.json.get("order_id")
+    user_id = request.json.get("user_id")
+    password = request.json.get("password")
+    o = operations.Operations()
+    code, message = o.cancer(order_id, user_id, password)
+    return jsonify({"message": message}), code
+
 # 搜索
 @bp_operations.route("/search", methods=["POST"])
 def book_search():

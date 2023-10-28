@@ -104,16 +104,74 @@ class Operations(db_conn.DBConn):
             return 906, "订单号有误"
         for each in result:
             state = each["state"]
+            back_book_id = each["book_id"]  # 书号
+            back_count = int(each["count"])  # 购买的数量
+            back_price = each["price"]  # 购买的单价
             break
-        if state != 0:
-            return 911, "只有处于未付款的订单才能进行本操作"
-        result = cur.delete_one({"order_id": order_id})
-        if result.deleted_count == 0:
-            return 912, "取消订单时出错"
         cur = self.conn["new_order"]
-        result = cur.delete_one({"order_id": order_id})
-        if result.deleted_count == 0:
-            return 913, "取消订单时出错"
+        result = cur.find({"order_id": order_id})
+        for each in result:
+            back_store_id = each["store_id"]  # 售出的商店id
+            back_user_id = each["user_id"]  # 购买的用户id
+            break
+        if state == 0:  # 订单尚未付款,只需返还数据
+            # 首先删除订单信息
+            cur = self.conn["new_order_detail"]
+            result = cur.delete_one({"order_id": order_id})
+            if result.deleted_count == 0:
+                return 912, "取消订单时出错"
+            cur = self.conn["new_order"]
+            result = cur.delete_one({"order_id": order_id})
+            if result.deleted_count == 0:
+                return 913, "取消订单时出错"
+            # 书籍返还
+            cur = self.conn["store"]
+            result = cur.update_one({"store_id": back_store_id, "book_id": back_book_id}, {"$inc": {"stock_level": back_count}})
+            if result.matched_count == 0:
+                return 918, "返还书籍时出错"
+        elif state == 1:  # 订单已付款，但尚未发货。此时需要退钱
+            # 额外需要知道店主是谁
+            cur = self.conn["user_store"]
+            result = cur.find({"store_id": back_store_id})
+            if result.count() == 0:
+                return 919, "店铺不存在"
+            for each in result:
+                store_owner_id = each["user_id"]
+                break
+            # 查一下店主钱是否充足，如果店主钱不足，仍然无法完成取消订单
+            cur = self.conn["user"]
+            result = cur.find({"user_id": store_owner_id})
+            if result.count() == 0:
+                return 920, "店主不存在"
+            for each in result:
+                seller_balance = each["balance"]
+                break
+            if seller_balance < back_count * back_price:
+                return 921, "店主余额不足，取消订单失败"
+            else:
+                result = cur.update_one({"user_id": store_owner_id}, {"$set": {"balance": seller_balance - back_count * back_price}})
+                if result.matched_count == 0:
+                    return 922, "退款失败"
+                result = cur.update_one({"user_id": back_user_id}, {"$inc": {"balance": back_count * back_price}})
+                if result.matched_count == 0:
+                    return 922, "退款失败"
+            # 首先删除订单信息
+            cur = self.conn["new_order_detail"]
+            result = cur.delete_one({"order_id": order_id})
+            if result.deleted_count == 0:
+                return 912, "取消订单时出错"
+            cur = self.conn["new_order"]
+            result = cur.delete_one({"order_id": order_id})
+            if result.deleted_count == 0:
+                return 913, "取消订单时出错"
+            # 书籍返还
+            cur = self.conn["store"]
+            result = cur.update_one({"store_id": back_store_id, "book_id": back_book_id}, {"$inc": {"stock_level": back_count}})
+            if result.matched_count == 0:
+                return 918, "返还书籍时出错"
+            # 退钱
+        else:
+            return 917, "已发货或已收货的订单无法取消"
         return 200, "ok"
 
     def global_search(self, keyword):
