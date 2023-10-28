@@ -55,7 +55,7 @@ class DBConn:
     #         return True
 
     def store_id_exist(self, store_id):
-        cur = self.conn["store"]
+        cur = self.conn["user_store"]
         result = cur.find({"store_id": store_id})
         count = result.count()
         if count == 0:
