@@ -23,12 +23,6 @@ class Seller(db_conn.DBConn):
                 return error.error_non_exist_store_id(store_id)
             if self.book_id_exist(store_id, book_id):
                 return error.error_exist_book_id(book_id)
-            # self.conn.execute(
-            #     "INSERT into store(store_id, book_id, book_info, stock_level)"
-            #     "VALUES (?, ?, ?, ?)",
-            #     (store_id, book_id, book_json_str, stock_level),
-            # )
-            # self.conn.commit()
             cur = self.conn["store"]
             cur.insert_one({
                 "store_id": store_id,
@@ -53,12 +47,6 @@ class Seller(db_conn.DBConn):
             if not self.book_id_exist(store_id, book_id):
                 return error.error_non_exist_book_id(book_id)
 
-            # self.conn.execute(
-            #     "UPDATE store SET stock_level = stock_level + ? "
-            #     "WHERE store_id = ? AND book_id = ?",
-            #     (add_stock_level, store_id, book_id),
-            # )
-            # self.conn.commit()
             cur = self.conn["store"]
             result = cur.update_one({"store_id": store_id, "book_id": book_id}, {"$inc": {"stock_level": add_stock_level}})
             if result.matched_count == 0:
@@ -75,11 +63,6 @@ class Seller(db_conn.DBConn):
                 return error.error_non_exist_user_id(user_id)
             if self.store_id_exist(store_id):
                 return error.error_exist_store_id(store_id)
-            # self.conn.execute(
-            #     "INSERT into user_store(store_id, user_id)" "VALUES (?, ?)",
-            #     (store_id, user_id),
-            # )
-            # self.conn.commit()
             cur = self.conn["user_store"]
             cur.insert_one({
                 "store_id": store_id,

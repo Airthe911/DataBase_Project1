@@ -6,6 +6,7 @@ from flask import request
 from view import auth
 from view import seller
 from view import buyer
+from view import operations
 from model.store import init_database
 
 bp_shutdown = Blueprint("shutdown", __name__)
@@ -44,4 +45,5 @@ def be_run():
     app.register_blueprint(auth.bp_auth)
     app.register_blueprint(seller.bp_seller)
     app.register_blueprint(buyer.bp_buyer)
+    app.register_blueprint(operations.bp_operations)
     app.run()
