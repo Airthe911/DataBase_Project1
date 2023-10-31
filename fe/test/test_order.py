@@ -18,7 +18,6 @@ class TestOrder:
         self.gen_book = GenBook(self.seller_id, self.store_id)
         self.seller = self.gen_book.get_seller()
         self.temp_order = None
-
         yield
 
     def test_cancel_order_ok(self):
@@ -80,10 +79,16 @@ class TestOrder:
         ok, buy_book_id_list = self.gen_book.gen(non_exist_book_id=False, low_stock_level=False)
         assert ok
         code, order_id = self.buyer.new_order(self.store_id, buy_book_id_list)
+        assert code == 200
         code = self.buyer.add_funds(1000000000)
+        assert code == 200
         code = self.buyer.payment(order_id)
+        assert code == 200
         code = self.opera.set_delivery(order_id, self.store_id,self.seller_id,self.seller_password)
         assert code == 200
+        code = self.opera.order_lookup(order_id, self.seller_id, self.seller_password)
+        assert code == 200
+
 
 
 
