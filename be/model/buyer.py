@@ -2,8 +2,8 @@ import sqlite3 as sqlite
 import uuid
 import json
 import logging
-from model import db_conn
-from model import error
+from be.model import db_conn
+from be.model import error
 from datetime import datetime
 
 class Buyer(db_conn.DBConn):
@@ -23,7 +23,7 @@ class Buyer(db_conn.DBConn):
             for book_id, count in id_and_count:
                 cur = self.conn["store"]
                 result = cur.find({"store_id": store_id, "book_id": book_id})
-                if result.count() == 0:
+                if cur.count_documents({"store_id": store_id, "book_id": book_id}) == 0:
                     return error.error_non_exist_book_id(book_id) + (order_id,)
                 for each in result:
                     stock_level = each["stock_level"]
@@ -66,7 +66,7 @@ class Buyer(db_conn.DBConn):
         try:
             cur = self.conn["new_order"]
             result = cur.find({"order_id": order_id})
-            if result.count() == 0:
+            if cur.count_documents({"order_id": order_id}) == 0:
                 return error.error_invalid_order_id(order_id)
             for each in result:
                 order_id = each["order_id"]
@@ -80,7 +80,7 @@ class Buyer(db_conn.DBConn):
             # 新功能需要，付款前先验证订单状态
             cur = self.conn["new_order_detail"]
             result = cur.find({"order_id": order_id})
-            if result.count() == 0:
+            if cur.count_documents({"order_id": order_id}) == 0:
                 return error.error_invalid_order_id(order_id)
             for each in result:
                 state_code = each["state"]
@@ -89,7 +89,7 @@ class Buyer(db_conn.DBConn):
                 return 912, "只有未付款的订单才能执行该操作"
             cur = self.conn["user"]
             result = cur.find({"user_id": buyer_id})
-            if result.count() == 0:
+            if cur.count_documents({"user_id": buyer_id}) == 0:
                 return error.error_non_exist_user_id(buyer_id)
             for each in result:
                 balance = each["balance"]
@@ -99,7 +99,7 @@ class Buyer(db_conn.DBConn):
                 return error.error_authorization_fail()
             cur = self.conn["user_store"]
             result = cur.find({"store_id": store_id})
-            if result.count() is None:
+            if cur.count_documents({"store_id": store_id}) is None:
                 return error.error_non_exist_store_id(store_id)
             for each in result:
                 seller_id = each["user_id"]
@@ -108,14 +108,13 @@ class Buyer(db_conn.DBConn):
                 return error.error_non_exist_user_id(seller_id)
             cur = self.conn["new_order_detail"]
             result = cur.find({"order_id": order_id})
-            if result.count() == 0:
+            if cur.count_documents({"order_id": order_id}) == 0:
                 return 903, "查询new_order_detail表出错"
             total_price = 0
             for each in result:
                 count = each["count"]
                 price = each["price"]
                 total_price = total_price + price * count
-                print(total_price)
             if balance < total_price:
                 return error.error_not_sufficient_funds(order_id)
 
@@ -126,21 +125,21 @@ class Buyer(db_conn.DBConn):
             result = cur.update_one({"user_id": seller_id}, {"$inc": {"balance": total_price}})
             if result.matched_count == 0:
                 return error.error_non_exist_user_id(seller_id)
-            """
-            cur = self.conn["new_order"]
-            result = cur.delete_one({"order_id": order_id})
-            if result.deleted_count == 0:
-                return error.error_invalid_order_id(order_id)
-            根据新功能需要，付款后不再删除订单信息
-            """
-
-            """
-            cur = self.conn["new_order_detail"]
-            result = cur.delete_one({"order_id": order_id})
-            if result.deleted_count == 0:
-                return error.error_invalid_order_id(order_id)
-            调整为修改state
-            """
+            # """
+            # cur = self.conn["new_order"]
+            # result = cur.delete_one({"order_id": order_id})
+            # if result.deleted_count == 0:
+            #     return error.error_invalid_order_id(order_id)
+            # 根据新功能需要，付款后不再删除订单信息
+            # """
+            #
+            # """
+            # cur = self.conn["new_order_detail"]
+            # result = cur.delete_one({"order_id": order_id})
+            # if result.deleted_count == 0:
+            #     return error.error_invalid_order_id(order_id)
+            # 调整为修改state
+            # """
             cur = self.conn["new_order_detail"]
             result = cur.update_one({"order_id": order_id}, {"$set": {"state": 1, "payment_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")}})
             if result.matched_count == 0:
@@ -161,7 +160,7 @@ class Buyer(db_conn.DBConn):
         try:
             cur = self.conn["user"]
             result = cur.find({"user_id": user_id})
-            if result.count() == 0:
+            if cur.count_documents({"user_id": user_id}) == 0:
                 return error.error_authorization_fail()
             for each in result:
                 saved_password = each["password"]

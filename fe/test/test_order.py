@@ -52,23 +52,28 @@ class TestOrder:
         code, order_id = self.buyer.new_order(self.store_id, buy_book_id_list)
         code = self.buyer.cancel(self.buyer_id, order_id + "_x")
         assert code != 200
-
-    def test_cancel_non_exist_order_direct_id(self):
-        ok, buy_book_id_list = self.gen_book.gen(non_exist_book_id=False, low_stock_level=False)
-        assert ok
-        code, order_id = self.buyer.new_order(self.store_id, buy_book_id_list)
         code, messsage = self.d_op.cancer(order_id + "_x", self.buyer_id, self.buyer_password)
         assert code != 200
+
 
     def test_processing_order_direct_cancer(self):  # 下单后删除当前订单
         ok, buy_book_id_list = self.gen_book.gen(non_exist_book_id=False, low_stock_level=False)
         assert ok
         code, order_id = self.buyer.new_order(self.store_id, buy_book_id_list)
         assert code == 200
-        code = self.opera.set_delivery(order_id, self.store_id, self.seller_id, self.seller_password)
-        assert code == 907
         code, message = self.d_op.cancer(order_id, self.buyer_id, self.buyer_password)
         assert code == 200
+        code = self.buyer.add_funds(1000000000)
+        assert code == 200
+        code = self.buyer.payment(order_id)
+        assert code == 200
+        code, message = self.d_op.cancer(order_id, self.buyer_id, self.buyer_password)
+        assert code == 200
+        code = self.buyer.add_funds(1000000000)
+        assert code == 200
+        code = self.buyer.payment(order_id)
+        assert code == 200
+
 
     def test_processing_order(self):  # 下单后查询当前订单
         ok, buy_book_id_list = self.gen_book.gen(non_exist_book_id=False, low_stock_level=False)
@@ -76,13 +81,10 @@ class TestOrder:
         code, order_id = self.buyer.new_order(self.store_id, buy_book_id_list)
         code = self.opera.order_lookup(order_id, self.buyer_id, self.buyer_password)
         assert code == 200
-
-    def test_processing_direct_order(self):  # 下单后查询当前订单
-        ok, buy_book_id_list = self.gen_book.gen(non_exist_book_id=False, low_stock_level=False)
-        assert ok
-        code, order_id = self.buyer.new_order(self.store_id, buy_book_id_list)
         code, message = self.d_op.lookup(order_id, self.buyer_id, self.buyer_password)
         assert code == 200
+        code, message = self.d_op.lookup(order_id+"_x", self.buyer_id, self.buyer_password)
+        assert code != 200
 
     def test_processing_order_sent(self):  # 发货后查询当前订单
         ok, buy_book_id_list = self.gen_book.gen(non_exist_book_id=False, low_stock_level=False)
@@ -93,6 +95,9 @@ class TestOrder:
         assert code == 907
         code = self.opera.order_lookup(order_id, self.buyer_id, self.buyer_password)
         assert code == 200
+        code, message = self.d_op.cancer(order_id, self.buyer_id, self.buyer_password)
+        assert code == 200
+
 
     def test_processing_order_direct_sent(self):  # 发货后查询当前订单
         ok, buy_book_id_list = self.gen_book.gen(non_exist_book_id=False, low_stock_level=False)
@@ -143,17 +148,22 @@ class TestOrder:
         code = self.opera.order_lookup(order_id, self.buyer_id, self.buyer_password)
         assert code == 200
 
-    def test_processing_order_receipt_error(self):  # 因为各种错误发货失败
+    def test_processing_order_receipt_error(self):  # 因为各种错误收货失败
         ok, buy_book_id_list = self.gen_book.gen(non_exist_book_id=False, low_stock_level=False)
         assert ok
         code, order_id = self.buyer.new_order(self.store_id, buy_book_id_list)
         assert code == 200
-        code, message = self.d_op.delivery(order_id, self.store_id, self.seller_id, self.buyer_password)
+        code = self.buyer.add_funds(1000000000)
+        assert code == 200
+        code = self.buyer.payment(order_id)
+        assert code == 200
+        code = self.opera.set_delivery(order_id, self.store_id, self.seller_id, self.seller_password)
+        assert code == 200
+        code, message = self.d_op.receipt(order_id, self.buyer_id, self.seller_password)
         assert code == 401
-        code, message = self.d_op.delivery(order_id, self.store_id+"_x", self.seller_id, self.seller_password)
-        assert code == 904
-        code, message = self.d_op.delivery(order_id + "_x", self.store_id, self.seller_id, self.seller_password)
+        code, message = self.d_op.receipt(order_id+"_x", self.buyer_id, self.buyer_password)
         assert code == 905
+
 
     def test_seller_processing_order_ok(self):
         ok, buy_book_id_list = self.gen_book.gen(non_exist_book_id=False, low_stock_level=False)
@@ -168,6 +178,11 @@ class TestOrder:
         assert code == 200
         code = self.opera.order_lookup(order_id, self.seller_id, self.seller_password)
         assert code == 200
+        code, message = self.d_op.lookup(order_id, self.seller_id, self.seller_password)
+        assert code == 200
+        code, message = self.d_op.lookup(order_id, self.seller_id, self.buyer_password)
+        assert code == 401
+
 
 
 

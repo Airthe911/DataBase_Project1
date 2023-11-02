@@ -1,7 +1,7 @@
 import pytest
 
-from access.new_seller import register_new_seller
-from access import book
+from fe.access.new_seller import register_new_seller
+from fe.access import book
 import uuid
 
 

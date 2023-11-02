@@ -40,3 +40,15 @@ class Auth:
         url = urljoin(self.url_prefix, "unregister")
         r = requests.post(url, json=json)
         return r.status_code
+
+    def processing_order(self, user_id: str) -> (int, list):
+        json = {"user_id": user_id}
+        url = urljoin(self.url_prefix, "processing_order")
+        r = requests.post(url, json=json)
+        return r.status_code, r.json().get("result")
+
+    def history_order(self, user_id: str) -> (int, list):
+        json = {"user_id": user_id}
+        url = urljoin(self.url_prefix, "history_order")
+        r = requests.post(url, json=json)
+        return r.status_code, r.json().get("result")

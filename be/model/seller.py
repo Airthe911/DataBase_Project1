@@ -1,6 +1,6 @@
 import sqlite3 as sqlite
-from model import error
-from model import db_conn
+from be.model import error
+from be.model import db_conn
 import json
 
 
@@ -40,7 +40,6 @@ class Seller(db_conn.DBConn):
             cur = self.conn["store"]
             result = cur.update_one({"store_id": store_id, "book_id": book_id}, {"$inc": {"stock_level": add_stock_level}})
             if result.matched_count == 0:
-                print("新增库存中, stock_level更新错误")
                 return 922, "新增库存中，stock_level更新错误"
         except sqlite.Error as e:
             return 528, "{}".format(str(e))

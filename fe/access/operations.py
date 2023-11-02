@@ -35,3 +35,9 @@ class Operations:
         url = urljoin(self.url_prefix, "search")
         r = requests.post(url, json=json)
         return r.status_code
+
+    def book_recommend(self, user_id, password) -> int:
+        json = {"user_id": user_id, "password": password}
+        url = urljoin(self.url_prefix, "recommend")
+        r = requests.post(url, json=json)
+        return r.status_code

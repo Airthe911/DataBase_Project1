@@ -1,6 +1,6 @@
-from bench.workload import Workload
-from bench.workload import NewOrder
-from bench.workload import Payment
+from fe.bench.workload import Workload
+from fe.bench.workload import NewOrder
+from fe.bench.workload import Payment
 import time
 import threading
 

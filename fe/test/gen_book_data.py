@@ -1,6 +1,6 @@
 import random
-from access import book
-from access.new_seller import register_new_seller
+from fe.access import book
+from fe.access.new_seller import register_new_seller
 
 
 class GenBook:
@@ -57,3 +57,6 @@ class GenBook:
         for item in self.buy_book_info_list:
             self.buy_book_id_list.append((item[0].id, item[1]))
         return ok, self.buy_book_id_list
+
+    def get_seller(self):
+        return self.seller

@@ -1,4 +1,3 @@
-
 import pytest
 from fe.access.new_buyer import register_new_buyer
 import uuid

@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask import request
 from flask import jsonify
-from model import operations
+from be.model import operations
 import json
 
 bp_operations = Blueprint("operations", __name__, url_prefix="/operations")
@@ -60,3 +60,17 @@ def book_search():
     else:
         code, message = o.global_search(keyword)
         return jsonify({"message": message}), code
+
+# 相似推荐 v1
+@bp_operations.route("/recommend", methods=["POST"])
+def book_recommend():
+    """
+    第一版推荐系统，在不改变原有数据表设计的条件下，根据用户历史订单推荐相似的书籍。
+    由于这是一个玩具项目，也没有实际的用户，因此各类协同过滤算法无法应用于该项目。故在此采用基于规则的推荐，根据作者和tags来进行推荐。具体来说，基于作者推荐三本；基于tags推荐七本
+
+    """
+    user_id = request.json.get("user_id")
+    password = request.json.get("password")
+    o = operations.Operations()
+    code, message = o.recommend(user_id, password)
+    return jsonify({"message": message}), code

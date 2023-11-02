@@ -2,7 +2,7 @@ import requests
 import threading
 from urllib.parse import urljoin
 from be import serve
-import conf
+from fe import conf
 
 thread: threading.Thread = None
 

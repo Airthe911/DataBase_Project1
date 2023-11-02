@@ -2,15 +2,8 @@ import jwt
 import time
 import logging
 import sqlite3 as sqlite
-from model import error
-from model import db_conn
-
-# encode a json string like:
-#   {
-#       "user_id": [user name],
-#       "terminal": [terminal code],
-#       "timestamp": [ts]} to a JWT
-#   }
+from be.model import error
+from be.model import db_conn
 
 
 def jwt_encode(user_id: str, terminal: str) -> str:
@@ -59,8 +52,7 @@ class User(db_conn.DBConn):
             terminal = "terminal_{}".format(str(time.time()).replace(".", "_"))
             token = jwt_encode(user_id, terminal)
             cur = self.conn["user"]
-            result = cur.find({"user_id": user_id})
-            if result.count() != 0:
+            if cur.count_documents({"user_id": user_id}) != 0:
                 return 931, "该账号已被注册"
             cur.insert_one({
                 "user_id": user_id,
@@ -77,8 +69,7 @@ class User(db_conn.DBConn):
     def check_token(self, user_id: str, token: str):
         cur = self.conn["user"]
         result = cur.find({"user_id": user_id})
-        count = result.count()
-        if count == 0:
+        if cur.count_documents({"user_id": user_id}) == 0:
             return error.error_authorization_fail()
         for each in result:
             db_token = each["token"]
@@ -91,8 +82,7 @@ class User(db_conn.DBConn):
     def check_password(self, user_id: str, password: str):
         cur = self.conn["user"]
         result = cur.find({"user_id": user_id})
-        count = result.count()
-        if count == 0:
+        if cur.count_documents({"user_id": user_id}) == 0:
             return error.error_authorization_fail()
         for each in result:
             this_password = each["password"]

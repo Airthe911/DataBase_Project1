@@ -26,7 +26,7 @@ def user_store_data_construct(line):
 sqlite_db = sqlite3.connect("./fe/data/be.db")
 cur_s = sqlite_db.cursor()
 client = pymongo.MongoClient("mongodb://localhost:27017/")
-db = client['de']
+db = client['bookstore']
 user = db['user']
 user_store = db['user_store']
 
